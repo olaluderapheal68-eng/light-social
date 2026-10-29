@@ -1,4 +1,4 @@
-﻿
+
 "use client";
 
 import { useEffect, useState, type ChangeEvent } from "react";
@@ -40,7 +40,7 @@ const demoPosts: FeedPost[] = [
     name: "Light Community",
     handle: "@lightcommunity",
     time: "2h",
-    text: "Welcome to Light — a place to share ideas, discover communities, and have meaningful conversations. ✨",
+    text: "Welcome to Light � a place to share ideas, discover communities, and have meaningful conversations. ?",
     image_url: null,
     mediaUrl: null,
     mediaType: null,
@@ -63,12 +63,12 @@ const demoPosts: FeedPost[] = [
 ];
 
 const navigation = [
-  { label: "Home", href: "/", icon: "⌂" },
-  { label: "Explore", href: "/explore", icon: "⌕" },
-  { label: "Notifications", href: "/notifications", icon: "♧" },
-  { label: "Messages", href: "/messages", icon: "✉" },
-  { label: "Communities", href: "/communities", icon: "◎" },
-  { label: "Profile", href: "/profile", icon: "♙" },
+  { label: "Home", href: "/", icon: "�" },
+  { label: "Explore", href: "/explore", icon: "?" },
+  { label: "Notifications", href: "/notifications", icon: "?" },
+  { label: "Messages", href: "/messages", icon: "?" },
+  { label: "Communities", href: "/communities", icon: "?" },
+  { label: "Profile", href: "/profile", icon: "?" },
 ];
 
 function getMediaType(value: string): MediaType {
@@ -371,7 +371,7 @@ export default function Home() {
             <h1>Home</h1>
           </div>
 
-          <Link className="account-link" href="/auth/sign-in">
+          <Link className="account-link" href="/auth/login">
             Sign in
           </Link>
         </header>
@@ -443,7 +443,7 @@ export default function Home() {
                     }}
                   />
                 ) : (
-                  <p>📄 {selectedFile.name}</p>
+                  <p>?? {selectedFile.name}</p>
                 )}
 
                 <button
@@ -472,7 +472,7 @@ export default function Home() {
                   document.getElementById("light-media-input")?.click()
                 }
               >
-                <span aria-hidden="true">▧</span>
+                <span aria-hidden="true">?</span>
               </button>
 
               <button
@@ -494,16 +494,16 @@ export default function Home() {
                   alert("Poll creation will be added in a future update.")
                 }
               >
-                <span aria-hidden="true">▤</span>
+                <span aria-hidden="true">?</span>
               </button>
 
               <button
                 type="button"
                 aria-label="Add emoji"
                 title="Add emoji"
-                onClick={() => setPostText((current) => current + " 😊")}
+                onClick={() => setPostText((current) => current + " ??")}
               >
-                <span aria-hidden="true">☺</span>
+                <span aria-hidden="true">?</span>
               </button>
             </div>
 
@@ -516,7 +516,7 @@ export default function Home() {
                 onClick={handlePost}
                 disabled={posting}
               >
-                {posting ? "Publishing…" : "Post"}
+                {posting ? "Publishing�" : "Post"}
               </button>
             </div>
           </div>
@@ -537,7 +537,7 @@ export default function Home() {
                 <div className="post-author">
                   <strong>{post.name}</strong>
                   <span>
-                    {post.handle} · {post.time}
+                    {post.handle} � {post.time}
                   </span>
                 </div>
 
@@ -579,7 +579,7 @@ export default function Home() {
                     rel="noreferrer"
                     className="post-file-link"
                   >
-                    📄 Open attached PDF
+                    ?? Open attached PDF
                   </a>
                 )}
 
@@ -592,10 +592,10 @@ export default function Home() {
 
                 <div className="post-actions">
                   <button type="button" aria-label="Reply">
-                    ♡ <span>{post.comments} replies</span>
+                    ? <span>{post.comments} replies</span>
                   </button>
                   <button type="button" aria-label="Like">
-                    ♡ <span>{post.likes} likes</span>
+                    ? <span>{post.likes} likes</span>
                   </button>
                   <button
                     type="button"
@@ -615,7 +615,7 @@ export default function Home() {
                       }
                     }}
                   >
-                    ↗ <span>Share</span>
+                    ? <span>Share</span>
                   </button>
                 </div>
               </div>
@@ -626,26 +626,26 @@ export default function Home() {
 
       <aside className="right-sidebar">
         <Link href="/explore" className="search-box">
-          ⌕ <span>Search Light</span>
+          ? <span>Search Light</span>
         </Link>
 
         <section className="side-card">
           <h2>Trending conversations</h2>
 
           <div className="trend">
-            <span>Technology · Trending</span>
+            <span>Technology � Trending</span>
             <strong>Building the future</strong>
             <small>1,240 posts</small>
           </div>
 
           <div className="trend">
-            <span>Creators · Popular</span>
+            <span>Creators � Popular</span>
             <strong>Share what you create</strong>
             <small>864 posts</small>
           </div>
 
           <div className="trend">
-            <span>Community · Growing</span>
+            <span>Community � Growing</span>
             <strong>Ideas that matter</strong>
             <small>532 posts</small>
           </div>
@@ -659,7 +659,7 @@ export default function Home() {
           </p>
         </section>
 
-        <p className="footer-note">Light Social · Your world, your voice.</p>
+        <p className="footer-note">Light Social � Your world, your voice.</p>
       </aside>
     </main>
   );
